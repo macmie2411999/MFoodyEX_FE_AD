@@ -1,0 +1,5 @@
+export const token_admin = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2JpbnNvbmhhbmtAZ21haWwuY29tIiwiaWF0IjoxNjgwNzc4NDc0LCJleHAiOjE2ODA4MDcyNzR9.i1CoYyeUKqEIsNcZtqarYwNeKJ4SedrkceC2-x9GKqQ";
+export const token_user = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2JpbnNvbmhhbmtAZ21haWwuY29tIiwiaWF0IjoxNjgwNzc4NDc0LCJleHAiOjE2ODA4MDcyNzR9.i1CoYyeUKqEIsNcZtqarYwNeKJ4SedrkceC2-x9GKqQ";
+
+// export default token_admin;
+// export default token_user;
