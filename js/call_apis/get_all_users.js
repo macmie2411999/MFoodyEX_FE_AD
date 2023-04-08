@@ -57,12 +57,11 @@ window.deleteUserFunction = deleteUserFunction;
 // Functions Render HTML
 function renderUsersToTableUsers(arrayUsers) {
     let contentHTML = '';
-    let i = 0;
     for (let user of arrayUsers) {
         if (user.roleUser === "ADMIN") {
             contentHTML += `
             <tr>
-            <td>${++i}</td>
+            <td>${user.idUser}</td>
             <td>${user.emailUser}</td>
             <td>${user.nameUser}</td>
             <td>${user.phoneNumberUser}</td>
@@ -78,7 +77,7 @@ function renderUsersToTableUsers(arrayUsers) {
         } else {
             contentHTML += `
             <tr>
-            <td>${++i}</td>
+            <td>${user.idUser}</td>
             <td>${user.emailUser}</td>
             <td>${user.nameUser}</td>
             <td>${user.phoneNumberUser}</td>

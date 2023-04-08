@@ -83,21 +83,18 @@
                                 aria-hidden="true"></i><span class="hide-menu">Users</span></a>
                     </li>
                     <li>
-                        <a href="groupwork.html" class="waves-effect"><i class="fa fa-table fa-fw"
+                        <a href="order-table.html" class="waves-effect"><i class="fa fa-table fa-fw"
                                 aria-hidden="true"></i><span class="hide-menu">Orders</span></a>
                     </li>
                     <li>
-                        <a href="task.html" class="waves-effect"><i class="fa fa-brands fa-product-hunt fa-fw"
+                        <a href="product-table.html" class="waves-effect"><i class="fa fa-brands fa-product-hunt fa-fw"
                                 aria-hidden="true"></i><span class="hide-menu">Products</span></a>
                     </li>
                     <li>
-                        <a href="role-table.html" class="waves-effect"><i class="fa fa-comments fa-fw"
+                        <a href="feedback-table.html" class="waves-effect"><i class="fa fa-comments fa-fw"
                                 aria-hidden="true"></i><span class="hide-menu">FeedBacks</span></a>
                     </li>
-                    <li>
-                        <a href="role-table.html" class="waves-effect"><i class="fa fa-modx fa-fw"
-                                aria-hidden="true"></i><span class="hide-menu">Quyền</span></a>
-                    </li>
+                    
                     <li>
                         <a href="blank.html" class="waves-effect"><i class="fa fa-columns fa-fw"
                                 aria-hidden="true"></i><span class="hide-menu">Blank Page</span></a>
@@ -115,10 +112,10 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Danh sách quyền</h4>
+                        <h4 class="page-title">Danh sách công việc</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 text-right">
-                        <a href="role-add.html" class="btn btn-sm btn-success">Thêm mới</a>
+                        <a href="product-add.html" class="btn btn-sm btn-success">Thêm mới</a>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -131,28 +128,42 @@
                                     <thead>
                                         <tr>
                                             <th>STT</th>
-                                            <th>Tên Quyền</th>
-                                            <th>Mô Tả</th>
+                                            <th>Tên Công Việc</th>
+                                            <th>Dự Án</th>
+                                            <th>Người Thực Hiện</th>
+                                            <th>Ngày Bắt Đầu</th>
+                                            <th>Ngày Kết Thúc</th>
+                                            <th>Trạng Thái</th>
                                             <th>Hành Động</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td>ROLE_ADMIN</td>
-                                            <td>Quản trị hệ thống</td>
+                                            <td>Phân tích dự án</td>
+                                            <td>Dự án CRM</td>
+                                            <td>Nguyễn Văn Tèo</td>
+                                            <td>22/05/2019</td>
+                                            <td>30/05/2019</td>
+                                            <td>Đã hoàn thành</td>
                                             <td>
                                                 <a href="#" class="btn btn-sm btn-primary">Sửa</a>
                                                 <a href="#" class="btn btn-sm btn-danger">Xóa</a>
+                                                <a href="#" class="btn btn-sm btn-info">Xem</a>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>2</td>
-                                            <td>ROLE_USER</td>
-                                            <td>Nhân viên</td>
+                                            <td>1</td>
+                                            <td>Thiết kế database</td>
+                                            <td>Dự án CRM</td>
+                                            <td>Trần Thị Lan</td>
+                                            <td>22/05/2019</td>
+                                            <td>30/05/2019</td>
+                                            <td>Đang thực hiện</td>
                                             <td>
                                                 <a href="#" class="btn btn-sm btn-primary">Sửa</a>
                                                 <a href="#" class="btn btn-sm btn-danger">Xóa</a>
+                                                <a href="#" class="btn btn-sm btn-info">Xem</a>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -177,7 +188,7 @@
     <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
     <!--slimscroll JavaScript -->
     <script src="js/jquery.slimscroll.js"></script>
-    <script src="js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <!--Wave Effects -->
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->

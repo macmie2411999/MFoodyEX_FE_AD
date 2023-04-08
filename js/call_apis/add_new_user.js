@@ -91,7 +91,8 @@ $(document).ready(function () {
                 })
                 .catch(function (response) {
                     console.log(response);
-                    alert('Error occurred while adding user.');
+                    // alert('Error occurred while adding user.');
+                    alert(response.response.data)
                 });
         }
     });
