@@ -146,6 +146,26 @@ function renderDashboard(totalUsers, totalOrders, totalProducts, totalFeedbacks)
         </div>
     </div>
 </div>
+<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+    <div class="white-box">
+        <div class="col-in row">
+            <div class="col-md-6 col-sm-6 col-xs-6"> <i class="linea-icon linea-basic"
+                    data-icon="&#xe00b;"></i>
+                <h5 class="text-muted vb">FeedBacks</h5>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <h3 class="counter text-right m-t-15 text-danger">${totalFeedbacks}</h3>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="${totalFeedbacks}"
+                        aria-valuemin="0" aria-valuemax="100" style="width: ${totalFeedbacks}%"> <span
+                            class="sr-only">${totalFeedbacks}% Complete (success)</span> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
             `;
 
     document.getElementById('head-dashboard-container').innerHTML = contentHTML;

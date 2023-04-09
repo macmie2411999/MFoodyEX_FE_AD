@@ -1,4 +1,4 @@
-export const token_admin = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2JpbnNvbmhhbmtAZ21haWwuY29tIiwiaWF0IjoxNjgwOTU1OTgwLCJleHAiOjE2ODA5ODQ3ODB9.42L-tWV55px-USjVHTQaikoW05gwraW0NA6ggVTWYsY";
+export const token_admin = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2JpbnNvbmhhbmtAZ21haWwuY29tIiwiaWF0IjoxNjgxMDQ2ODM4LCJleHAiOjE2ODEwNzU2Mzh9._RjaSyoWyreaZNQtpFYG-Ll5YicgQL3wk1F-egJEt6Q";
 export const token_user = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyb2JpbnNvbmhhbmtAZ21haWwuY29tIiwiaWF0IjoxNjgwNzc4NDc0LCJleHAiOjE2ODA4MDcyNzR9.i1CoYyeUKqEIsNcZtqarYwNeKJ4SedrkceC2-x9GKqQ";
 
 // export default token_admin;

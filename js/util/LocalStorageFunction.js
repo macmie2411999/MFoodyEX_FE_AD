@@ -5,7 +5,7 @@ var customLocalStorage = {
      * @param {*} arrayProvided An Array
      * @param {*} nameArrayProvided Set a name for the array
      */
-    saveArrayToLocalStorage: function (arrayProvided, nameArrayProvided ) {
+    saveArrayToLocalStorage: function (arrayProvided, nameArrayProvided) {
         // Stringify provided array (to String)
         var stringArrayProvided = JSON.stringify(arrayProvided);
 
@@ -28,8 +28,27 @@ var customLocalStorage = {
             resultArray = JSON.parse(stringArrayProvided);
         }
         return resultArray;
-    }
+    },
 
+    saveItemToLocalStorage: function (itemProvided, nameItemProvided) {
+        // Stringify provided array (to String)
+        var stringItemProvided = JSON.stringify(itemProvided);
+
+        // Save stringified array to Local Storage
+        localStorage.setItem(nameItemProvided, stringItemProvided);
+
+        // Save stringified array to Cookies (5 is expire day to keep data in Cookies, Application -> Cookies )
+        setCookie(nameItemProvided, stringItemProvided, 5);
+    },
+
+    getItemFromLocalStorage: function (nameItemProvided) {
+        // Check if localStorage have any Array whose name matches with nameArrayProvided
+
+        var stringItemProvided = localStorage.getItem(nameItemProvided);
+        resultArray = JSON.parse(stringItemProvided);
+
+        return resultArray;
+    }
 }
 
 function setCookie(name, value, days) {

@@ -2,6 +2,7 @@
 // Import class User
 
 import { token_admin, token_user } from './default_tokens.js';
+import { user_add_local } from './default_apis.js';
 
 $(document).ready(function () {
     $('#add_new_user_form').validate({
@@ -77,7 +78,7 @@ $(document).ready(function () {
             };
             console.log(newUser);
             let promise = axios({
-                url: 'http://localhost:8080/user/add',
+                url: user_add_local,
                 method: 'POST',
                 data: newUser,
                 // headers: {

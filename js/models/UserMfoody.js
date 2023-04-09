@@ -1,6 +1,6 @@
 export class UserMfoody {
     constructor(idUser, emailUser, passwordUser, nameUser, phoneNumberUser, addressUser, roleUser) {
-        this.idUser = 12345;
+        this.idUser = idUser;
         this.emailUser = emailUser;
         this.password = passwordUser;
         this.nameUser= nameUser;
