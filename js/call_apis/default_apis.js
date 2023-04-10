@@ -5,6 +5,7 @@ export const user_getAll_local = "http://localhost:8080/user/getAll";
 export const user_getByID_local =  "http://localhost:8080/user/get/";
 export const user_edit_local =  "http://localhost:8080/user/edit";
 export const user_deleteByID_local = "http://localhost:8080/user/delete/";
+export const user_getByEmail_local = "http://localhost:8080/user/getByEmail/";
 
 // ProductMfoody
 export const product_add_local = "http://localhost:8080/product/add";
@@ -31,3 +32,7 @@ export const feedback_getAll_local = "http://localhost:8080/feedback/getAll";
 export const feedback_getByID_local =  "http://localhost:8080/feedback/get/";
 export const feedback_edit_local =  "http://localhost:8080/feedback/edit";
 export const feedback_deleteByID_local = "http://localhost:8080/feedback/delete/";
+
+// Application
+export const application_login_local = "http://localhost:8080/applicationMfoody/login";
+export const application_logout_local = "http://localhost:8080/applicationMfoody/logout";
