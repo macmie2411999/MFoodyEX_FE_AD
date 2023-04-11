@@ -1,9 +1,6 @@
 // Set some global variables
 import { token_admin, token_user } from './default_tokens.js'
 import { user_getAll_local, user_deleteByID_local } from './default_apis.js'
-import {
-    UserMfoody
-} from "../models/UserMfoody.js";
 
 let valid = true;
 var arrayUsers = [];
@@ -89,7 +86,7 @@ function renderUsersToTableUsers(arrayUsers) {
                 <td>${user.phoneNumberUser}</td>
                 <td>${user.addressUser}</td>
                 <td>${user.roleUser}</td>
-                <td>
+                <td >
                     <a href="#" data-idUser="${user.idUser}" onclick="processUserFunction(event)" class="btn btn-sm btn-primary">Edit</a>
                     <a href="user-details.html" class="btn btn-sm btn-info">Detail</a>
                     <a href="#" class="btn btn-sm btn-danger disabled" id="delete_user_button" data-idUser="${user.idUser}" onclick="deleteUserFunction(event)" title="Can't Delete Admin">Delete</a>

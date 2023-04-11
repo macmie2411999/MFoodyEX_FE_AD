@@ -109,105 +109,71 @@
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row bg-title">
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <h4 class="page-title">Add A New Order 
-                            <div style="color: orange !important; opacity: 0.7 !important; font-weight: bold; font-size: 15px; margin-top: 10px !important;">
-                                (This action (not by Role_User) is not recommended and depending on a/some Detail_Product_Order(s))</div>
-                        </h4>
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">Edit Product</h4>
                     </div>
                 </div>
-               
                 <!-- /.row -->
                 <!-- .row -->
                 <div class="row">
                     <div class="col-md-2 col-12"></div>
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
-                            <form class="form-horizontal form-material" id="add_new_order_form">
-                                <div class="form-group">
-                                    <label class="col-md-12">Date Order</label>
+                            <form class="form-horizontal form-material" id="edit_product_form">
+                                <div class="row">
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="dd/mm/yyyy"
-                                            class="form-control form-control-line" id="dateOrder" name="dateOrder">
+                                        <div class="white-box">
+                                            <h3 class="box-title" style="color: red; opacity: 0.7 !important; font-weight: bold; font-size: 15px; text-align: center !important;">There Is No Data Loaded</h3>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Date Receipt Order</label>
+                                <!-- <div class="form-group">
+                                    <label class="col-md-12">Dự án</label>
                                     <div class="col-md-12">
-                                        <input type="text" placeholder="dd/mm/yyyy"
-                                            class="form-control form-control-line" id="dateReceiptOrder" name="dateReceiptOrder">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Shipping Fee (Rup)</label>
-                                    <div class="col-md-12">
-                                        <input type="number" placeholder="0"
-                                            class="form-control form-control-line" id="shippingPriceOrder" name="shippingPriceOrder">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-12">Shipping Method</label>
-                                    <div class="col-sm-12">
-                                        <select class="form-control form-control-line" id="shippingMethodOrder">
-                                            <option>Recieve at Store</option>
-                                            <option>Shipping Service</option>
+                                        <select class="form-control form-control-line">
+                                            <option>Dự án CRM</option>
+                                            <option>Dự án Elearning</option>
+                                            <option>Dự án Rạp chiếu phim</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Total Quantity</label>
+                                    <label class="col-md-12">Tên công việc</label>
                                     <div class="col-md-12">
-                                        <input type="number" placeholder="1"
-                                            class="form-control form-control-line" id="quantityAllProductsInOrder" name="quantityAllProductsInOrder">
+                                        <input type="text" placeholder="Tên công việc"
+                                            class="form-control form-control-line">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-12">Total Sale Price (Rup)</label>
+                                    <label class="col-md-12">Người thực hiện</label>
                                     <div class="col-md-12">
-                                        <input type="number" placeholder="50"
-                                            class="form-control form-control-line" id="totalSalePriceOrder" name="totalSalePriceOrder">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Total Full Price (Rup)</label>
-                                    <div class="col-md-12">
-                                        <input type="number" placeholder="80"
-                                            class="form-control form-control-line" id="totalFullPriceOrder" name="totalFullPriceOrder">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-12">Payment Method</label>
-                                    <div class="col-sm-12">
-                                        <select class="form-control form-control-line" id="paymentMethodOrder">
-                                            <option>Cash</option>
-                                            <option>Credit Card</option>
+                                        <select class="form-control form-control-line">
+                                            <option>Nguyễn Văn Tèo</option>
+                                            <option>Trần Thị Lan</option>
+                                            <option>Cao Ngọc Hiếu</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-sm-12">Status Order</label>
-                                    <div class="col-sm-12">
-                                        <select class="form-control form-control-line" id="statusOrder">
-                                            <option>Processing</option>
-                                            <option>Completed</option>
-                                            <option>Aborted</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">ID User</label>
+                                    <label class="col-md-12">Ngày bắt đầu</label>
                                     <div class="col-md-12">
-                                        <input type="number" placeholder="215232"
-                                            class="form-control form-control-line" id="idUser" name="idUser">
+                                        <input type="text" placeholder="dd/MM/yyyy"
+                                            class="form-control form-control-line"> 
                                     </div>
                                 </div>
-
+                                <div class="form-group">
+                                    <label class="col-md-12">Ngày kết thúc</label>
+                                    <div class="col-md-12">
+                                        <input type="text" placeholder="dd/MM/yyyy"
+                                            class="form-control form-control-line"> 
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-success" id="buttonSubmitAddOrder">Add Order</button>
-                                        <a href="order-table.html" class="btn btn-primary">Go Back</a>
+                                        <button type="submit" class="btn btn-success">Lưu lại</button>
+                                        <a href="product-table.html" class="btn btn-primary">Quay lại</a>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
@@ -239,7 +205,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
         integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="js/call_apis/order-add.js"></script>
+    <script type="module" src="js/call_apis/product-edit.js"></script>
+    <script src="./js/util/LocalStorageFunction.js"></script>
 </body>
 
 </html>

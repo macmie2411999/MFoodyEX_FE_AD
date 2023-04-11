@@ -6,6 +6,7 @@ import { user_edit_local } from './default_apis.js';
 // import { customLocalStorage } from '../util/LocalStorageFunction';
 
 var selectedUserForEditing = customLocalStorage.getItemFromLocalStorage("selectedToEditUser");
+console.log(selectedUserForEditing);
 
 // Functions Render HTML
 function renderUserInformation() {

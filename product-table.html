@@ -112,10 +112,10 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Danh sách công việc</h4>
+                        <h4 class="page-title">List of Products</h4>
                     </div>
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12 text-right">
-                        <a href="product-add.html" class="btn btn-sm btn-success">Thêm mới</a>
+                        <a href="product-add.html" class="btn btn-sm btn-success">Add New</a>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -123,49 +123,47 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="white-box">
-                            <div class="table-responsive">
+                            <div class="table-responsive" id="table-responsive">
                                 <table class="table" id="example">
                                     <thead>
                                         <tr>
-                                            <th>STT</th>
-                                            <th>Tên Công Việc</th>
-                                            <th>Dự Án</th>
-                                            <th>Người Thực Hiện</th>
-                                            <th>Ngày Bắt Đầu</th>
-                                            <th>Ngày Kết Thúc</th>
-                                            <th>Trạng Thái</th>
-                                            <th>Hành Động</th>
+                                            <th>ID</th>
+                                            <th>Name_Product</th>
+                                            <th>Album</th>
+                                            <th>Description_Product</th>
+                                            <th>Sale_Price</th>
+                                            <th>Full_Price</th>
+                                            <th>Weight_(Kg)</th>
+                                            <th>Import_Quantity</th>
+                                            <th>Import_Date</th>
+                                            <th>Storehouse_Quantity</th>
+                                            <th>Rating</th>
+                                            <th>Category</th>
+                                            <th>Brand_Product</th>
+                                            <th>Functions</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Phân tích dự án</td>
-                                            <td>Dự án CRM</td>
-                                            <td>Nguyễn Văn Tèo</td>
-                                            <td>22/05/2019</td>
-                                            <td>30/05/2019</td>
-                                            <td>Đã hoàn thành</td>
+                                    <tbody class="list_products" id="list_products" >
+                                        <td style="color: red !important; opacity: 0.7 !important; font-weight: bold; font-size: 15px; width: 267px !important; display: flex;">There Is No Data Loaded</td>
+                                        <!-- <tr>
+                                            <td>ID</td>
+                                            <td>Name</td>
+                                            <td>Album</td>
+                                            <td>Description</td>
+                                            <td>Sale Price</td>
+                                            <td>Full Price</td>
+                                            <td>Weight</td>
+                                            <td>Import Quantity</td>
+                                            <td>Import Date</td>
+                                            <td>Storehouse Quantity</td>
+                                            <td>Rating</td>
+                                            <td>Category</td>
+                                            <td>Brand</td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-primary">Sửa</a>
-                                                <a href="#" class="btn btn-sm btn-danger">Xóa</a>
-                                                <a href="#" class="btn btn-sm btn-info">Xem</a>
+                                                <a href="#" data-idProduct="${product.idProduct}" onclick="processProductFunction(event)" class="btn btn-sm btn-primary">Edit</a>
+                                                <a href="#" id="delete_product_button" data-idProduct="${product.idProduct}" onclick="deleteProductFunction(event)" class="btn btn-sm btn-danger">Delete</a>
                                             </td>
-                                        </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Thiết kế database</td>
-                                            <td>Dự án CRM</td>
-                                            <td>Trần Thị Lan</td>
-                                            <td>22/05/2019</td>
-                                            <td>30/05/2019</td>
-                                            <td>Đang thực hiện</td>
-                                            <td>
-                                                <a href="#" class="btn btn-sm btn-primary">Sửa</a>
-                                                <a href="#" class="btn btn-sm btn-danger">Xóa</a>
-                                                <a href="#" class="btn btn-sm btn-info">Xem</a>
-                                            </td>
-                                        </tr>
+                                        </tr> -->
                                     </tbody>
                                 </table>
                             </div>
@@ -193,11 +191,19 @@
     <script src="js/waves.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/custom.min.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function () {
             $('#example').DataTable();
         });
-    </script>
+    </script> -->
+
+    <!-- Call APIs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+        integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="js/call_apis/product-table.js"></script>
+    <script src="./js/util/LocalStorageFunction.js"></script>
+    
 </body>
 
 </html>

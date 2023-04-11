@@ -110,7 +110,7 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <h4 class="page-title">Add A New Order 
+                        <h4 class="page-title">Edit Order 
                             <div style="color: orange !important; opacity: 0.7 !important; font-weight: bold; font-size: 15px; margin-top: 10px !important;">
                                 (This action (not by Role_User) is not recommended and depending on a/some Detail_Product_Order(s))</div>
                         </h4>
@@ -123,8 +123,15 @@
                     <div class="col-md-2 col-12"></div>
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
-                            <form class="form-horizontal form-material" id="add_new_order_form">
-                                <div class="form-group">
+                            <form class="form-horizontal form-material" id="edit_order_form">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="white-box">
+                                            <h3 class="box-title" style="color: red; opacity: 0.7 !important; font-weight: bold; font-size: 15px; text-align: center !important;">There Is No Data Loaded</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group">
                                     <label class="col-md-12">Date Order</label>
                                     <div class="col-md-12">
                                         <input type="text" placeholder="dd/mm/yyyy"
@@ -204,10 +211,10 @@
 
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-success" id="buttonSubmitAddOrder">Add Order</button>
+                                        <button type="submit" class="btn btn-success" id="buttonSubmitAddProduct">Add Order</button>
                                         <a href="order-table.html" class="btn btn-primary">Go Back</a>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
@@ -239,7 +246,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
         integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="js/call_apis/order-add.js"></script>
+    <script type="module" src="js/call_apis/order-edit.js"></script>
+    <script src="./js/util/LocalStorageFunction.js"></script>
 </body>
 
 </html>
