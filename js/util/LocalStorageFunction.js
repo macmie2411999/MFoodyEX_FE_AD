@@ -48,6 +48,14 @@ var customLocalStorage = {
         resultArray = JSON.parse(stringItemProvided);
 
         return resultArray;
+    },
+    /**
+     * This function helps to remove an item from Local Storage by its name
+     * @param {*} name The name of the item to remove
+     */
+    removeItemFromLocalStorage: function (name) {
+        localStorage.removeItem(name);
+        eraseCookie(name);
     }
 }
 

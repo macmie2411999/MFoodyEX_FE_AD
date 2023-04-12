@@ -5,12 +5,18 @@ import { order_getAll_local, order_deleteByID_local } from './default_apis.js'
 let valid = true;
 var arrayOrders = [];
 
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
 function getAllOrdersApi() {
     let promise = axios({
         url: order_getAll_local,
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer ' + token_admin
+            'Authorization': 'Bearer ' + token_current_admin
         }
     })
 
@@ -43,7 +49,7 @@ const deleteOrderFunction = (e) => {
             url: order_deleteByID_local + idOrder,
             method: 'DELETE',
             headers: {
-                'Authorization': 'Bearer ' + token_admin
+                'Authorization': 'Bearer ' + token_current_admin
             }
         })
             .then(function (response) {
@@ -65,10 +71,10 @@ const processOrderFunction = (e) => {
         if (value.idOrder === idSelectedToEditOrder) {
 
             // Save all information of selected order for editting to localStorage
-            customLocalStorage.saveItemToLocalStorage(value, "selectedToEditOrder");
+            customLocalStorage.saveItemToLocalStorage(value, "MFdooy - selectedToEditOrder");
         }
     }
-    console.log(customLocalStorage.getItemFromLocalStorage("selectedToEditOrder"));
+    console.log(customLocalStorage.getItemFromLocalStorage("MFdooy - selectedToEditOrder"));
     window.location.href = 'order-edit.html';
 }
 window.processOrderFunction = processOrderFunction;

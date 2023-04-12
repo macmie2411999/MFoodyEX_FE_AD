@@ -5,12 +5,18 @@ import { user_getAll_local, user_deleteByID_local } from './default_apis.js'
 let valid = true;
 var arrayUsers = [];
 
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
 function getAllUsersApi() {
     let promise = axios({
         url: user_getAll_local,
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer ' + token_admin
+            'Authorization': 'Bearer ' + token_current_admin
         }
     })
 
@@ -43,7 +49,7 @@ const deleteUserFunction = (e) => {
             url: user_deleteByID_local + idUser,
             method: 'DELETE',
             headers: {
-                'Authorization': 'Bearer ' + token_admin
+                'Authorization': 'Bearer ' + token_current_admin
             }
         })
             .then(function (response) {
@@ -65,10 +71,10 @@ const processUserFunction = (e) => {
         if(value.idUser === idSelectedToEditUser){
 
             // Save all information of selected user for editting to localStorage
-            customLocalStorage.saveItemToLocalStorage(value, "selectedToEditUser");
+            customLocalStorage.saveItemToLocalStorage(value, "MFdooy - selectedToEditUser");
         }
     }
-    console.log(customLocalStorage.getItemFromLocalStorage("selectedToEditUser"));
+    console.log(customLocalStorage.getItemFromLocalStorage("MFdooy - selectedToEditUser"));
     window.location.href = 'user-edit.html';
 }
 window.processUserFunction = processUserFunction;

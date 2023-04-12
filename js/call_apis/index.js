@@ -3,9 +3,15 @@ import { token_admin, token_user } from './default_tokens.js'
 import { user_countTotalNumber_local, order_countTotalNumber_local, product_countTotalNumber_local, feedback_countTotalNumber_local } from './default_apis.js'
 let valid = true;
 
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
 let config = {
     headers: {
-        'Authorization': 'Bearer ' + token_admin
+        'Authorization': 'Bearer ' + token_current_admin
     }
 };
 

@@ -35,34 +35,29 @@
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
-            <div class="navbar-header">
-                <a class="navbar-toggle hidden-sm hidden-md hidden-lg" title="Show Menu"
-                    style="margin-left: 150px; color: #fff;" href="javascript:void(0)" data-toggle="collapse"
-                    data-target=".navbar-collapse">
+            <div class="navbar-header"> 
+                <a class="navbar-toggle hidden-sm hidden-md hidden-lg" title="Show Menu" style="margin-left: 150px; color: #fff;" href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse">
                     <i class="fa fa-bars"></i>
                 </a>
                 <div class="top-left-part" style="background: transparent;">
                     <a class="logo" href="index.html">
                         <b>
-                            <img src="plugins/images/icon_logo_brand_updated3_crop.png" width="170px" height="auto"
-                                style="padding-left: 30px; scale: 1.3;" alt="home" />
+                            <img src="plugins/images/icon_logo_brand_updated3_crop.png" width="170px" height="auto" style="padding-left: 30px; scale: 1.3;" alt="home" />
                         </b>
                     </a>
                 </div>
-
+            
                 <ul class="nav navbar-top-links navbar-right pull-right">
                     <li>
                         <div class="dropdown">
-                            <a class="profile-pic dropdown-toggle" data-toggle="dropdown" href="#">
-                                <img src="plugins/images/users/admin_avatar5.png" alt="user-img" width="36"
-                                    class="img-circle" />
-                                <b class="hidden-xs" style="color: #fff;">Admin</b>
+                            <a class="profile-pic dropdown-toggle" data-toggle="dropdown" href="#"> 
+                                <img src="plugins/images/users/admin_avatar5.png" alt="user-img" width="36" class="img-circle" />
+                                <b class="hidden-xs" style="color: #fff;">Admin</b> 
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="profile.html">Information</a></li>
-                                <li><a href="#">Job</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Log Out</a></li>
+                                <li><a href="#" id="buttonLogout">Log Out</a></li>
                             </ul>
                         </div>
                     </li>
@@ -222,7 +217,9 @@
         integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="js/call_apis/user-edit.js"></script>
+    <script type="module" src="js/call_apis/logout.js"></script>
     <script src="./js/util/LocalStorageFunction.js"></script>
+    <script src="./js/call_apis/localStorageAndCookieProcess.js"></script>
 
 </body>
 

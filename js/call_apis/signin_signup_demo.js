@@ -2,13 +2,14 @@
 // Import class User
 
 import { token_admin, token_user } from './default_tokens.js';
+import { index_page_local , signin_signup_page_local} from './default_urls_page.js';
 import { application_login_local, user_getByID_local, user_getByEmail_local } from './default_apis.js';
 // import jwtDecode from "./jwt-decode.js";
 
-// import { customLocalStorage } from '../util/LocalStorageFunction';
-
-// var selectedUserForEditing = customLocalStorage.getItemFromLocalStorage("tokenCurentUser");
 const signInButton = document.getElementById('button-signin');
+
+// Check if Token and User's role valid
+localStorageCookiesProcess.checkTokenAndUserInformationAtLoginPage();
 
 $(document).ready(function () {
     $('#signin_user_form').validate({
@@ -18,7 +19,8 @@ $(document).ready(function () {
                 email: true
             },
             passwordLogin: {
-                required: true
+                required: true,
+                minlength: 6
             }
         },
         messages: {
@@ -28,7 +30,7 @@ $(document).ready(function () {
             },
             passwordLogin: {
                 required: "Please enter your password.",
-                minlength: "Your password must be at least 8 characters long."
+                minlength: "Your password is not valid."
             }
         },
         submitHandler: function () {
@@ -53,13 +55,12 @@ $(document).ready(function () {
                     
                     // When get token, use it to get UserMfoody Infor
                     getUserByEmailApi(tokenLogin, userName);
-
-
                 })
                 .catch(function (response) {
                     // Handle if failed
-                    customLocalStorage.saveItemToLocalStorage('', "MFoody - tokenCurrentUser");
-                    customLocalStorage.saveItemToLocalStorage('', "MFoody - currentUser");
+                    customLocalStorage.removeItemFromLocalStorage("MFoody - tokenCurrentUser");
+                    customLocalStorage.removeItemFromLocalStorage("MFoody - currentUser");
+                    alert("Your UserName or Password is invalid!" );
                     console.log(response);
                 });
         }
@@ -83,14 +84,14 @@ function getUserByEmailApi(tokenLogin, userName) {
 
         if (currentUser.roleUser === "ADMIN") {
             // Direct to admin main page
-            window.location.href = 'http://127.0.0.1:5501/index.html';
+            window.location.href = index_page_local;
         }
 
     })
 
     .catch(function (err) {
         // Handle if failed
-        customLocalStorage.saveItemToLocalStorage('', "MFoody - currentUser");
+        customLocalStorage.removeItemFromLocalStorage("MFoody - currentUser");
         console.log(err);
     })
 };

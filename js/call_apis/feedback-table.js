@@ -3,6 +3,9 @@ import { token_admin, token_user } from './default_tokens.js'
 import { feedback_getAll_local, feedback_deleteByID_local } from './default_apis.js'
 let valid = true;
 
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
 function getAllFeedbacksApi() {
     let promise = axios({
         url: feedback_getAll_local,

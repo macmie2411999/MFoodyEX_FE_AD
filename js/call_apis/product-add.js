@@ -4,6 +4,12 @@
 import { token_admin, token_user } from './default_tokens.js';
 import { product_add_local } from './default_apis.js';
 
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
 $(document).ready(function () {
     $('#add_new_product_form').validate({
         rules: {
@@ -116,7 +122,7 @@ $(document).ready(function () {
                 data: newProduct,
                 headers: {
                     // "Content-Type": "application/json",
-                    'Authorization': 'Bearer ' + token_admin
+                    'Authorization': 'Bearer ' + token_current_admin
                 },
             })
                 .then(function (response) {
@@ -125,7 +131,6 @@ $(document).ready(function () {
                 })
                 .catch(function (response) {
                     console.log(response);
-                    // alert('Error occurred while adding user.');
                     alert(response.response.data)
                 });
         }

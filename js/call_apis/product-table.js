@@ -5,12 +5,18 @@ import { product_getAll_local, product_deleteByID_local } from './default_apis.j
 let valid = true;
 var arrayProducts = [];
 
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
 function getAllProductsApi() {
     let promise = axios({
         url: product_getAll_local,
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer ' + token_admin
+            'Authorization': 'Bearer ' + token_current_admin
         }
     })
 
@@ -43,7 +49,7 @@ const deleteProductFunction = (e) => {
             url: product_deleteByID_local + idProduct,
             method: 'DELETE',
             headers: {
-                'Authorization': 'Bearer ' + token_admin
+                'Authorization': 'Bearer ' + token_current_admin
             }
         })
             .then(function (response) {
@@ -65,10 +71,10 @@ const processProductFunction = (e) => {
         if (value.idProduct === idSelectedToEditProduct) {
 
             // Save all information of selected product for editting to localStorage
-            customLocalStorage.saveItemToLocalStorage(value, "selectedToEditProduct");
+            customLocalStorage.saveItemToLocalStorage(value, "MFdooy - selectedToEditProduct");
         }
     }
-    console.log(customLocalStorage.getItemFromLocalStorage("selectedToEditProduct"));
+    console.log(customLocalStorage.getItemFromLocalStorage("MFdooy - selectedToEditProduct"));
     window.location.href = 'product-edit.html';
 }
 window.processProductFunction = processProductFunction;

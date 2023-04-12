@@ -3,9 +3,15 @@
 
 import { token_admin, token_user } from './default_tokens.js';
 import { order_edit_local } from './default_apis.js';
-// import { customLocalStorage } from '../util/LocalStorageFunction';
 
-var selectedOrderForEditing = customLocalStorage.getItemFromLocalStorage("selectedToEditOrder");
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
+// Get selected order
+const selectedOrderForEditing = customLocalStorage.getItemFromLocalStorage("MFdooy - selectedToEditOrder");
 console.log(selectedOrderForEditing);
 
 // Functions Render HTML
@@ -208,7 +214,7 @@ $(document).ready(function () {
                 data: newOrder,
                 headers: {
                     // "Content-Type": "application/json",
-                    'Authorization': 'Bearer ' + token_admin
+                    'Authorization': 'Bearer ' + token_current_admin
                 }
             })
                 .then(function (response) {

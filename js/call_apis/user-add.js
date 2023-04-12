@@ -4,6 +4,12 @@
 import { token_admin, token_user } from './default_tokens.js';
 import { user_add_local } from './default_apis.js';
 
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
 $(document).ready(function () {
     $('#add_new_user_form').validate({
         rules: {
@@ -92,7 +98,6 @@ $(document).ready(function () {
                 })
                 .catch(function (response) {
                     console.log(response);
-                    // alert('Error occurred while adding user.');
                     alert(response.response.data)
                 });
         }

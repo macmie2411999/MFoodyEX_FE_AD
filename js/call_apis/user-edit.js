@@ -3,9 +3,16 @@
 
 import { token_admin, token_user } from './default_tokens.js';
 import { user_edit_local } from './default_apis.js';
-// import { customLocalStorage } from '../util/LocalStorageFunction';
+import { user_table_page_local } from './default_urls_page.js'
 
-var selectedUserForEditing = customLocalStorage.getItemFromLocalStorage("selectedToEditUser");
+// Process LocalStorage and Check Cookies
+localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
+
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
+// Get selected user
+const selectedUserForEditing = customLocalStorage.getItemFromLocalStorage("MFdooy - selectedToEditUser");
 console.log(selectedUserForEditing);
 
 // Functions Render HTML
@@ -157,7 +164,7 @@ $(document).ready(function () {
                 data: newUser,
                 headers: {
                     // "Content-Type": "application/json",
-                    'Authorization': 'Bearer ' + token_admin
+                    'Authorization': 'Bearer ' + token_current_admin
                 }
             })
                 .then(function (response) {
@@ -166,7 +173,6 @@ $(document).ready(function () {
                 })
                 .catch(function (response) {
                     console.log(response);
-                    // alert('Error occurred while adding user.');
                     alert(response.response.data)
                 });
         }
