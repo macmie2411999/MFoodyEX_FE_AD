@@ -201,6 +201,7 @@ $(document).ready(function () {
             let brandProduct = $('#brandProduct').val();
 
             let newProduct = {
+                idProduct: selectedProductForEditing.idProduct,
                 nameProduct: nameProduct,
                 albumProduct: albumProduct,
                 descriptionProduct: descriptionProduct,

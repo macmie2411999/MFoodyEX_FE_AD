@@ -6,12 +6,15 @@ let valid = true;
 // Process LocalStorage and Check Cookies
 localStorageCookiesProcess.checkTokenAndUserInformationAtOtherPages();
 
+// Get current user's token
+const token_current_admin = customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser");
+
 function getAllFeedbacksApi() {
     let promise = axios({
         url: feedback_getAll_local,
         method: 'GET',
         headers: {
-            'Authorization': 'Bearer ' + token_admin
+            'Authorization': 'Bearer ' + token_current_admin
         }
     })
 

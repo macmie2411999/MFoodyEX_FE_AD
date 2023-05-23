@@ -57,7 +57,7 @@
                                 <b class="hidden-xs" style="color: #fff;">Admin</b> 
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="profile.html">Information</a></li>
+                                <!-- <li><a href="profile.html">Information</a></li> -->
                                 <li class="divider"></li>
                                 <li><a href="#" id="buttonLogout">Log Out</a></li>
                             </ul>
@@ -143,26 +143,16 @@
                                         </tr>
                                     </thead>
                                     <tbody class="list_products" id="list_products" >
-                                        <td style="color: red !important; opacity: 0.7 !important; font-weight: bold; font-size: 15px; width: 267px !important; display: flex;">There Is No Data Loaded</td>
-                                        <!-- <tr>
-                                            <td>ID</td>
-                                            <td>Name</td>
-                                            <td>Album</td>
-                                            <td>Description</td>
-                                            <td>Sale Price</td>
-                                            <td>Full Price</td>
-                                            <td>Weight</td>
-                                            <td>Import Quantity</td>
-                                            <td>Import Date</td>
-                                            <td>Storehouse Quantity</td>
-                                            <td>Rating</td>
-                                            <td>Category</td>
-                                            <td>Brand</td>
-                                            <td>
-                                                <a href="#" data-idProduct="${product.idProduct}" onclick="processProductFunction(event)" class="btn btn-sm btn-primary">Edit</a>
-                                                <a href="#" id="delete_product_button" data-idProduct="${product.idProduct}" onclick="deleteProductFunction(event)" class="btn btn-sm btn-danger">Delete</a>
-                                            </td>
-                                        </tr> -->
+                                        <!-- <td style="color: red !important; opacity: 0.7 !important; font-weight: bold; font-size: 15px; width: 267px !important; display: flex;">There Is No Data Loaded</td> -->
+                                        
+                                        <!-- Preload when call API -->
+                                        <td>
+                                            <div class="preload-container">
+                                                <div class="loading-spinner"></div>
+                                                <p class="loading-text">Loading</p>
+                                            </div>
+                                        </td>
+                                        
                                     </tbody>
                                 </table>
                             </div>
