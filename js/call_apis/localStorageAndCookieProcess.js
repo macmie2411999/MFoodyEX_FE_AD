@@ -10,7 +10,7 @@ var localStorageCookiesProcess = {
 
     checkTokenAndUserInformation: function () {
         if (customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser") === null || customLocalStorage.getItemFromLocalStorage("MFoody - currentUser") === null) {
-            window.location.href = "http://127.0.0.1:5501/signin_signup_demo.html";
+            window.location.href = "http://127.0.0.1:5502/signin_signup_demo.html";
         }
     },
 
@@ -26,7 +26,7 @@ var localStorageCookiesProcess = {
         
         if (checkCurrentUser && customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser") !== null) {
             console.log(customLocalStorage.getItemFromLocalStorage("MFoody - currentUser").roleUser)
-            window.location.href = "http://127.0.0.1:5501/index.html";
+            window.location.href = "http://127.0.0.1:5502/index.html";
         } 
     },
 
@@ -42,9 +42,9 @@ var localStorageCookiesProcess = {
         
         if (checkCurrentUser && customLocalStorage.getItemFromLocalStorage("MFoody - tokenCurrentUser") !== null) {
             console.log(customLocalStorage.getItemFromLocalStorage("MFoody - currentUser").roleUser)
-            // window.location.href = "http://127.0.0.1:5501/index.html";
+            // window.location.href = "http://127.0.0.1:5502/index.html";
         } else {
-            window.location.href = "http://127.0.0.1:5501/signin_signup_demo.html";
+            window.location.href = "http://127.0.0.1:5502/signin_signup_demo.html";
         }
     },
 

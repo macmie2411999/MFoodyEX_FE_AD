@@ -118,7 +118,7 @@ function getUserByEmailApi(tokenLogin, userName) {
 //         customLocalStorage.saveItemToLocalStorage(tokenLogin, "tokenCurentUser");
 
 //         // Direct to main page
-//         window.location.href = 'http://127.0.0.1:5501/index.html';
+//         window.location.href = 'http://127.0.0.1:5502/index.html';
 //     })
 
 //     promise.catch(function (err) {
